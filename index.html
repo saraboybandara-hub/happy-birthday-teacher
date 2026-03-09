@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Sir</title>
+
+<style>
+
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background: radial-gradient(circle at top,#0f2027,#203a43,#2c5364);
+    color:white;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+h1{
+    font-size:55px;
+    margin-top:40px;
+    text-shadow:0 0 20px cyan;
+}
+
+p{
+    font-size:20px;
+}
+
+.container{
+    margin:40px auto;
+    width:70%;
+    background:rgba(255,255,255,0.08);
+    padding:30px;
+    border-radius:15px;
+    backdrop-filter:blur(10px);
+    box-shadow:0 0 20px rgba(0,255,255,0.3);
+}
+
+button{
+    padding:15px 30px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    background:cyan;
+    color:black;
+    cursor:pointer;
+    margin-top:20px;
+    box-shadow:0 0 15px cyan;
+}
+
+button:hover{
+    transform:scale(1.1);
+}
+
+footer{
+    margin-top:40px;
+    padding:20px;
+    background:#000;
+}
+
+/* 🎈 Balloons */
+
+.balloon{
+    width:60px;
+    height:80px;
+    background:red;
+    border-radius:50%;
+    position:absolute;
+    bottom:-100px;
+    animation:float 10s infinite;
+}
+
+.balloon:after{
+    content:'';
+    width:2px;
+    height:60px;
+    background:white;
+    position:absolute;
+    left:50%;
+    top:80px;
+}
+
+.balloon:nth-child(1){left:10%; background:#ff4d4d; animation-duration:9s;}
+.balloon:nth-child(2){left:25%; background:#4dd2ff; animation-duration:11s;}
+.balloon:nth-child(3){left:45%; background:#ffff66; animation-duration:8s;}
+.balloon:nth-child(4){left:65%; background:#66ff99; animation-duration:10s;}
+.balloon:nth-child(5){left:85%; background:#ff66ff; animation-duration:12s;}
+
+@keyframes float{
+    0%{transform:translateY(0);}
+    100%{transform:translateY(-120vh);}
+}
+
+</style>
+
+<script>
+
+function surprise(){
+    alert("🎉 Happy Birthday to the Best IT Teacher! Thank you for teaching us coding, technology, and inspiring our future! 💻🎂");
+}
+
+function playMusic(){
+    document.getElementById("music").play();
+}
+
+</script>
+
+</head>
+
+<body onclick="playMusic()">
+
+<h1>🎂 Happy Birthday Sir 🎂</h1>
+<p>Our Amazing IT Teacher 💻</p>
+
+<div class="container">
+<h2>👨‍🏫 Thank You For Inspiring Us</h2>
+
+<p>
+You teach us programming, technology, and how to think like innovators.
+Because of you, we are learning how to build the future with computers.
+</p>
+
+<button onclick="surprise()">🎁 Birthday Surprise</button>
+
+</div>
+
+<footer>
+<p>Made with ❤️ by Your Student | 2026</p>
+</footer>
+
+<!-- 🎵 Birthday Music -->
+<audio id="music" loop>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🎈 Balloons -->
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+<div class="balloon"></div>
+
+</body>
+</html>
